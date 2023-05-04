@@ -1,4 +1,3 @@
-pip install snowflake-connector-python
 import streamlit as st
 import pandas as pd
 st.title("My First Streamlit App")
