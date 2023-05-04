@@ -10,7 +10,7 @@ my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 st.dataframe(my_fruit_list)
 st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 my_fruit_list = my_fruit_list.set_index('Fruit')
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
-streamlit.header("Fruityvice Fruit Advice!")
+import requests as rq
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
+st.header("Fruityvice Fruit Advice!")
